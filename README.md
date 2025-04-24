@@ -1,4 +1,4 @@
-MOSRES is a Python library designed for [briefly describe the purpose of the library or tool, e.g., "generating modular resolutions for mathematical objects"]. It simplifies and automates the process of [specific functionality, e.g., "creating complex models and structures used in computational mathematics"].
+MOSRES is a Python library designed for [briefly describe the purpose of the library or tool, e.g., "generating modular resolutions for mathematical objects"]. It simplifies and automates the process of [specific functionality, e.g., "creating complex models and structures used in computational mathematics"]. 
 
 ## Features
 
