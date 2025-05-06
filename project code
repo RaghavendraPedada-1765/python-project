@@ -46,16 +46,13 @@ MORSE_CODE_DICT = {
 }
 
 
-# Function to encrypt the string
-# according to the morse code chart
+# Function to encrypt the string according to the morse code chart
 def encrypt(message):
     cipher = ""
     for letter in message:
         if letter != " ":
-            # Looks up the dictionary and adds the
-            # corresponding morse code
-            # along with a space to separate
-            # morse codes for different characters
+            # Looks up the dictionary and adds the corresponding morse code
+            # along with a space to separate morse codes for different characters
             cipher += MORSE_CODE_DICT[letter] + " "
         else:
             # 1 space indicates different characters
@@ -65,11 +62,9 @@ def encrypt(message):
     return cipher
 
 
-# Function to decrypt the string
-# from morse to english
+# Function to decrypt the string from morse to english
 def decrypt(message):
-    # extra space added at the end to access the
-    # last morse code
+    # extra space added at the end to access the last morse code
     message += " "
 
     decipher = ""
@@ -102,15 +97,30 @@ def decrypt(message):
     return decipher
 
 
-# Hard-coded driver function to run the program
+# Driver function to run the program
 def main():
-    message = "Mrinank-Bhowmick"
-    result = encrypt(message.upper())
-    print(result)
+    while True:
+        print("Choose an option:")
+        print("1. Encrypt a message to Morse code")
+        print("2. Decrypt a Morse code message to English")
+        print("3. Exit")
+        choice = input("Enter your choice (1/2/3): ")
 
-    message = "-- .-. .. -. .- -. -.- -....- -... .... --- .-- -- .. -.-. -.-"
-    result = decrypt(message)
-    print(result)
+        if choice == "1":
+            message = input("Enter the message to encrypt: ").upper()
+            result = encrypt(message)
+            print("Encrypted Morse Code:")
+            print(result)
+        elif choice == "2":
+            message = input("Enter the Morse code to decrypt: ")
+            result = decrypt(message)
+            print("Decrypted English Message:")
+            print(result)
+        elif choice == "3":
+            print("Exiting the program.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
 
 # Executes the main function
